@@ -1,0 +1,14 @@
+target
+.idea
+*.iws
+*.iml
+*.ipr
+*.classpath
+*.project
+*.settings
+*.log
+*.*.log
+*.class
+*.jar
+*.war
+.idea/vcs.xml
