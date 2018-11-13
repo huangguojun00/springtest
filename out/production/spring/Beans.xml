@@ -6,7 +6,7 @@
        <property name="message2" value="HelloSecondWorld"></property>
        <property name="message3" value="Namaste India"/>
    </bean>
-    <bean id="helloIndia" class="com.huang.HelloIndia" parent="beanTeamplate">
+    <bean id="helloIndia" class="com.huang.tcp.HelloIndia" parent="beanTeamplate">
         <property name="message1" value="Hello India"/>
         <property name="message3" value="Namaste India"/>
     </bean>

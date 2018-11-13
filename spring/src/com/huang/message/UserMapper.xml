@@ -1,0 +1,90 @@
+
+
+
+
+
+
+
+
+
+
+
+<update id="insertOrUpdate" parameterType="com.zto.carrier.dal.model.BaseUserContact">
+    merge into ztapp.baseusercontact t1
+    using (select #{id,jdbcType=DECIMAL} as id from dual) t2
+    on (t1.id = t2.id)
+    when not matched then insert
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+        <if test="id != null" >ID,</if>
+        <if test="email != null" >EMAIL,</if>
+        <if test="emailvaliated != null" >EMAILVALIATED,</if>
+        <if test="mobile != null" >MOBILE,</if>
+        <if test="mobilevaliated != null" >MOBILEVALIATED,</if>
+        <if test="telephone != null" >TELEPHONE,</if>
+        <if test="qq != null" >QQ,</if>
+        <if test="ww != null" >WW,</if>
+        <if test="wechat != null" >WECHAT,</if>
+        <if test="wechatvaliated != null" >WECHATVALIATED,</if>
+        <if test="yixin != null" >YIXIN,</if>
+        <if test="yixinvaliated != null" >YIXINVALIATED,</if>
+        <if test="createon != null" >CREATEON,</if>
+        <if test="createuserid != null" >CREATEUSERID,</if>
+        <if test="modifiedon != null" >MODIFIEDON,</if>
+        <if test="modifieduserid != null" >MODIFIEDUSERID,</if>
+        <if test="modifiedby != null" >MODIFIEDBY,</if>
+        <if test="createby != null" >CREATEBY,</if>
+        <if test="shortnumber != null" >SHORTNUMBER,</if>
+        <if test="extension != null" >EXTENSION,</if>
+        <if test="showmobile != null" >SHOWMOBILE,</if>
+        <if test="mobileverificationdate != null" >MOBILEVERIFICATIONDATE,</if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+        <if test="id != null" >#{id,jdbcType=DECIMAL},</if>
+        <if test="email != null" >#{email,jdbcType=VARCHAR},</if>
+        <if test="emailvaliated != null" >#{emailvaliated,jdbcType=DECIMAL},</if>
+        <if test="mobile != null" >#{mobile,jdbcType=VARCHAR},</if>
+        <if test="mobilevaliated != null" >#{mobilevaliated,jdbcType=DECIMAL},</if>
+        <if test="telephone != null" >#{telephone,jdbcType=VARCHAR},</if>
+        <if test="qq != null" >#{qq,jdbcType=VARCHAR},</if>
+        <if test="ww != null" >#{ww,jdbcType=VARCHAR},</if>
+        <if test="wechat != null" >#{wechat,jdbcType=VARCHAR},</if>
+        <if test="wechatvaliated != null" >#{wechatvaliated,jdbcType=DECIMAL},</if>
+        <if test="yixin != null" >#{yixin,jdbcType=VARCHAR},</if>
+        <if test="yixinvaliated != null" >#{yixinvaliated,jdbcType=DECIMAL},</if>
+        <if test="createon != null" >#{createon,jdbcType=TIMESTAMP},</if>
+        <if test="createuserid != null" >#{createuserid,jdbcType=VARCHAR},</if>
+        <if test="modifiedon != null" >#{modifiedon,jdbcType=TIMESTAMP},</if>
+        <if test="modifieduserid != null" >#{modifieduserid,jdbcType=VARCHAR},</if>
+        <if test="modifiedby != null" >#{modifiedby,jdbcType=VARCHAR},</if>
+        <if test="createby != null" >#{createby,jdbcType=VARCHAR},</if>
+        <if test="shortnumber != null" >#{shortnumber,jdbcType=VARCHAR},</if>
+        <if test="extension != null" >#{extension,jdbcType=VARCHAR},</if>
+        <if test="showmobile != null" >#{showmobile,jdbcType=DECIMAL},</if>
+        <if test="mobileverificationdate != null" >#{mobileverificationdate,jdbcType=TIMESTAMP},</if>
+    </trim>
+    when matched then update
+    <set >
+        <if test="email != null" >EMAIL = #{email,jdbcType=VARCHAR},</if>
+        <if test="emailvaliated != null" >EMAILVALIATED = #{emailvaliated,jdbcType=DECIMAL},</if>
+        <if test="mobile != null" >MOBILE = #{mobile,jdbcType=VARCHAR},</if>
+        <if test="mobilevaliated != null" >MOBILEVALIATED = #{mobilevaliated,jdbcType=DECIMAL},</if>
+        <if test="telephone != null" >TELEPHONE = #{telephone,jdbcType=VARCHAR},</if>
+        <if test="qq != null" >QQ = #{qq,jdbcType=VARCHAR},</if>
+        <if test="ww != null" >WW = #{ww,jdbcType=VARCHAR},</if>
+        <if test="wechat != null" >WECHAT = #{wechat,jdbcType=VARCHAR},</if>
+        <if test="wechatvaliated != null" >WECHATVALIATED = #{wechatvaliated,jdbcType=DECIMAL},</if>
+        <if test="yixin != null" >YIXIN = #{yixin,jdbcType=VARCHAR},</if>
+        <if test="yixinvaliated != null" >YIXINVALIATED = #{yixinvaliated,jdbcType=DECIMAL},</if>
+        <if test="createon != null" >CREATEON = #{createon,jdbcType=TIMESTAMP},</if>
+        <if test="createuserid != null" >CREATEUSERID = #{createuserid,jdbcType=VARCHAR},</if>
+        <if test="modifiedon != null" >MODIFIEDON = #{modifiedon,jdbcType=TIMESTAMP},</if>
+        <if test="modifieduserid != null" >MODIFIEDUSERID = #{modifieduserid,jdbcType=VARCHAR},</if>
+        <if test="modifiedby != null" >MODIFIEDBY = #{modifiedby,jdbcType=VARCHAR},</if>
+        <if test="createby != null" >CREATEBY = #{createby,jdbcType=VARCHAR},</if>
+        <if test="shortnumber != null" >SHORTNUMBER = #{shortnumber,jdbcType=VARCHAR},</if>
+        <if test="extension != null" >EXTENSION = #{extension,jdbcType=VARCHAR},</if>
+        <if test="showmobile != null" >SHOWMOBILE = #{showmobile,jdbcType=DECIMAL},</if>
+        <if test="mobileverificationdate != null" >MOBILEVERIFICATIONDATE = #{mobileverificationdate,jdbcType=TIMESTAMP},</if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+</update>

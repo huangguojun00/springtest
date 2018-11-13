@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huang.dao.MenuMapper">
+    <resultMap id="BaseResultMap" type="com.huang.domain.Menu">
+        <id column="MENU_ID" property="menuId" jdbcType="VARCHAR" />
+        <result column="MENU_NAME" property="menuName" jdbcType="VARCHAR" />
+        <result column="MENU_ADDR" property="menuAddr" jdbcType="VARCHAR" />
+        <result column="PARENTID" property="parentId" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="selectAllM" resultMap="BaseResultMap">
+     select * from zto_app_menu m
+  </select>
+</mapper>

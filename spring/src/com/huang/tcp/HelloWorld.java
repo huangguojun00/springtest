@@ -1,4 +1,4 @@
-package com.huang;
+package com.huang.tcp;
 
 public class HelloWorld {
     private String message1;
