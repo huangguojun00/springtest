@@ -10,4 +10,9 @@
         <property name="message1" value="Hello India"/>
         <property name="message3" value="Namaste India"/>
     </bean>
+    <bean id="textEditor" class="com.huang.constructorbaseddependencyinjiection.TextEditor">
+        <constructor-arg ref="spellChecker"/>
+    </bean>
+    <bean id="spellChecker" class="com.huang.constructorbaseddependencyinjiection.SpellChecker">
+    </bean>
 </beans>
