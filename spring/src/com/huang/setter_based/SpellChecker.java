@@ -1,4 +1,4 @@
-package com.huang.constructorbaseddependencyinjiection;
+package com.huang.setter_based;
 
 /**
  * @Author Huang Guojun
@@ -7,9 +7,9 @@ package com.huang.constructorbaseddependencyinjiection;
  */
 public class SpellChecker {
     public SpellChecker() {
-        System.out.println("Inside SpellChecker constructor");
+        System.out.println("爸爸是spellchecker的无参构造");
     }
     public void checkSpelling(){
-        System.out.println("Inside checkSpelling");
+        System.out.println("Inside checkSpelling." );
     }
 }
